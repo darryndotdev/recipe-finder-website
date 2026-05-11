@@ -1,0 +1,29 @@
+@use '../abstracts/mixins' as *;
+
+/* =========================================
+   TYPOGRAPHY
+========================================= */
+
+body {
+    @include body-md;
+}
+
+h1 {
+    @include heading-xl;
+}
+
+h2 {
+    @include heading-lg;
+}
+
+h3 {
+    @include heading-md;
+}
+
+h4 {
+    @include heading-sm;
+}
+
+p {
+    @include body-md;
+}

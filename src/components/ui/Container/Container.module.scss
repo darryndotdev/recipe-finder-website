@@ -1,0 +1,11 @@
+@use '@/styles/abstracts/breakpoints' as *;
+
+.container {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 var(--space-200);
+
+    @include tablet {
+        padding: 0 var(--space-400);
+    }
+}

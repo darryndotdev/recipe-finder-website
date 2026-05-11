@@ -1,0 +1,26 @@
+@use '@/styles/abstracts/breakpoints' as *;
+@use '@/styles/abstracts/mixins' as *;
+
+.footer {
+    background-color: var(--color-neutral-0);
+    padding-top: var(--space-400);
+    padding-bottom: var(--space-300);
+
+    @include tablet {
+        padding: var(--space-500) 0;
+    }
+
+    .content {
+        @include flex-column-center;
+        gap: var(--space-300);
+
+        @include tablet {
+            @include flex-row-between;
+        }
+
+        .list {
+            @include flex;
+            gap: var(--space-300);
+        }
+    }
+}

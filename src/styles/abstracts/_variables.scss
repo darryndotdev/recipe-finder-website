@@ -1,0 +1,50 @@
+@use './tokens' as tokens;
+
+/* ROOT CSS VARIABLES */
+
+:root {
+    /* COLORS */
+
+    @each $name, $value in tokens.$colors {
+        --color-#{$name}: #{$value};
+    }
+
+    /* TYPOGRAPHY */
+
+    --font-heading: #{tokens.$font-family-heading};
+    --font-body: #{tokens.$font-family-body};
+
+    @each $name, $value in tokens.$font-sizes {
+        --fs-#{$name}: #{$value};
+    }
+
+    /* SPACING */
+
+    @each $name, $value in tokens.$spacing {
+        --space-#{$name}: #{$value};
+    }
+
+    /* RADIUS */
+
+    @each $name, $value in tokens.$radius {
+        --radius-#{$name}: #{$value};
+    }
+
+    /* SHADOWS */
+
+    @each $name, $value in tokens.$shadows {
+        --shadow-#{$name}: #{$value};
+    }
+
+    /* TRANSITIONS */
+
+    @each $name, $value in tokens.$transitions {
+        --transition-#{$name}: #{$value};
+    }
+
+    /* Z-INDEX */
+
+    @each $name, $value in tokens.$z-index {
+        --z-#{$name}: #{$value};
+    }
+}
