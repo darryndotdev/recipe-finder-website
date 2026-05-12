@@ -21,6 +21,26 @@
         .list {
             @include flex;
             gap: var(--space-300);
+
+            .link {
+                display: inline-block;
+                color: var(--color-neutral-900);
+                border-radius: var(--radius-xs);
+
+                transition: color var(--transition-normal);
+                transition: box-shadow var(--transition-normal);
+
+                &:hover {
+                    color: var(--color-neutral-600);
+                }
+
+                &:focus-visible {
+                    box-shadow:
+                        0 0 0 2px var(--color-neutral-0),
+                        0 0 0 4px var(--color-neutral-900);
+                    outline: none;
+                }
+            }
         }
     }
 }
