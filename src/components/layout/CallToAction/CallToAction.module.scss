@@ -1,0 +1,19 @@
+@use '@/styles/abstracts/breakpoints' as *;
+@use '@/styles/abstracts/mixins' as *;
+
+.section {
+    background-color: var(--color-neutral-200);
+    text-align: center;
+    padding: var(--space-800) var(--space-200);
+    border-radius: var(--radius-xxl);
+
+    @include tablet {
+        background:
+            url('@/assets/icons/pattern-fork.svg') -10px center no-repeat,
+            url('@/assets/icons/pattern-knife.svg') calc(100% - -50px) center
+                no-repeat,
+            var(--color-neutral-200);
+        background-size: contain;
+        padding: var(--space-1200) var(--space-200);
+    }
+}

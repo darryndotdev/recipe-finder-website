@@ -1,8 +1,12 @@
+import CallToAction from '@/components/layout/CallToAction/CallToAction';
+import Container from '@/components/ui/Container/Container';
+
 function Home() {
     return (
-        <div>
+        <Container>
             <h1>Homepage</h1>
-        </div>
+            <CallToAction />
+        </Container>
     );
 }
 
