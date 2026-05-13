@@ -18,6 +18,12 @@
         --fs-#{$name}: #{$value};
     }
 
+    /* FONT WEIGHT */
+
+    @each $name, $value in tokens.$font-weights {
+        --font-weight-#{$name}: #{$value};
+    }
+
     /* SPACING */
 
     @each $name, $value in tokens.$spacing {

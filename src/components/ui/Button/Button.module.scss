@@ -1,0 +1,88 @@
+@use '@/styles/abstracts/breakpoints' as *;
+@use '@/styles/abstracts/mixins' as *;
+
+.button {
+    @include flex-center;
+    background-color: var(--color-neutral-900);
+    color: var(--color-neutral-0);
+    font-family: var(--font-body);
+    font-size: var(--fs-lg);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+
+    transition: background-color var(--transition-normal);
+
+    &:hover {
+        background-color: var(--color-neutral-600);
+    }
+
+    &:focus-visible {
+        box-shadow:
+            0 0 0 2px var(--color-neutral-0),
+            0 0 0 4px var(--color-neutral-900);
+        outline: none;
+    }
+}
+
+/* Radius */
+.radiusXs {
+    border-radius: var(--radius-xs);
+}
+.radiusSm {
+    border-radius: var(--radius-sm);
+}
+.radiusMd {
+    border-radius: var(--radius-md);
+}
+.radiusLg {
+    border-radius: var(--radius-lg);
+}
+.radiusXl {
+    border-radius: var(--radius-xl);
+}
+.radiusFull {
+    border-radius: var(--radius-full);
+}
+
+/* Padding Y */
+.paddingY100 {
+    padding-top: var(--space-100);
+    padding-bottom: var(--space-100);
+}
+.paddingY150 {
+    padding-top: var(--space-150);
+    padding-bottom: var(--space-150);
+}
+.paddingY200 {
+    padding-top: var(--space-200);
+    padding-bottom: var(--space-200);
+}
+
+/* Padding X */
+.paddingX200 {
+    padding-left: var(--space-200);
+    padding-right: var(--space-200);
+}
+.paddingX300 {
+    padding-left: var(--space-300);
+    padding-right: var(--space-300);
+}
+.paddingX400 {
+    padding-left: var(--space-400);
+    padding-right: var(--space-400);
+}
+
+/* Margin Top */
+.marginT200 {
+    margin-top: var(--space-200);
+}
+.marginT300 {
+    margin-top: var(--space-300);
+}
+.marginT400 {
+    margin-top: var(--space-400);
+
+    @include tablet {
+        margin-top: var(--space-500);
+    }
+}
