@@ -38,6 +38,7 @@ function Button({
     paddingX = '400',
     marginT,
     radius = 'lg',
+    className,
 }) {
     return (
         <Link
@@ -48,6 +49,7 @@ function Button({
                 paddingYMap[paddingY],
                 paddingXMap[paddingX],
                 marginTMap[marginT],
+                className,
             ]
                 .filter(Boolean)
                 .join(' ')}
