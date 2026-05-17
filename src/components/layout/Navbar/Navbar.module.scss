@@ -1,6 +1,10 @@
 @use '@/styles/abstracts/breakpoints' as *;
 @use '@/styles/abstracts/mixins' as *;
 
+nav {
+    position: relative;
+}
+
 .nav {
     @include flex-between;
     padding: var(--space-250) 0;
@@ -60,10 +64,41 @@
     }
 
     .btn {
+        @include button-reset;
         display: block;
+        border: none;
+        color: var(--color-neutral-900);
+        background-color: var(--color-neutral-300);
+        border-radius: var(--radius-sm);
+        padding: var(--space-100);
 
         @include desktop {
             display: none;
         }
+    }
+}
+
+.mobileNav {
+    box-shadow: var(--shadow-lg);
+    padding: var(--space-100);
+    border-radius: var(--radius-md);
+    background-color: var(--color-neutral-0);
+
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    @include desktop {
+        display: none;
+    }
+
+    .item {
+        padding: var(--space-150) var(--space-100);
+    }
+
+    .link {
+        text-decoration: none;
+        color: inherit;
+        font-weight: var(--font-weight-semibold);
     }
 }
